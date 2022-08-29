@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "terraformssh" {
-    ami = ""
+    ami = "ami-05fa00d4c63e32376"
     instance_type = "t2.micro" 
     key_name= "aws_key"
     vpc_security_group_ids = [aws_security_group.main.id]
