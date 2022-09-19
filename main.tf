@@ -1,7 +1,10 @@
+
+#  check your AWS Console to check your default region
+
 provider "aws" {
    region     = "us-east-1"   
 }
-
+# can find the AMI under "Launch Instance"
 resource "aws_instance" "terraformssh" {
     ami = "ami-05fa00d4c63e32376"
     instance_type = "t2.micro" 
@@ -34,7 +37,7 @@ resource "aws_security_group" "main" {
   ]
  ingress                = [
    {
-     cidr_blocks      = [ "0.0.0.0/0", ]
+     cidr_blocks      = [ "0.0.0.0/0", ] #add comp IP
      description      = ""
      from_port        = 22
      ipv6_cidr_blocks = []
